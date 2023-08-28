@@ -1,86 +1,48 @@
 import React, { useState } from "react"
+import People from '../assets/people.png'
 
-const NavBar = () => {
+const Navbar = () => {
   const [toggle, setToggle] = useState(false)
 
-  return (
-    <div className="w-full font-space-grotesk p-[10px] px-10 flex justify-between items-center">
-      <div className="flex">
-        <span className="hidden font-space-grotesk mt-1  font-black text-3xl text-black text-left xl:block lg:block md:block">
-          Valubah
-        </span>
-      </div>
+  return (<div className="bg-[#146614] font-montserrat">
+    <div className="px-28">
 
-      <div>
-        <ul className="hidden md:flex font-semibold">
-          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-            <a href="#">About</a>
-          </li>
-          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-            <a href="#">FAQs</a>
-          </li>
-          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-            <a href="#">Contact Us</a>
-          </li>
-          <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-            <a href="#">Get Started</a>
-          </li>
-        </ul>
-        <div className="flex flex-col  items-end">
-          {!toggle ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              onClick={() => setToggle(!toggle)}
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6 cursor-pointer md:hidden"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
-              />
-            </svg>
-          ) : (
-            <svg
-              onClick={() => setToggle(!toggle)}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 cursor-pointer md:hidden h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          )}
-
-          {toggle ? (
-            <ul className="md:hidden absolute flex mt-8 flex-col bg-gray-200 p-2 rounded-sm z-[9999]">
-              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-                <a href="#">Home</a>
-              </li>
-              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-                <a href="#">FAQs</a>
-              </li>
-              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-                <a href="#">Contact Us</a>
-              </li>
-              <li className="menuItem hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out mx-3 hover:text-orange-700 hover:underline hover:underline-offset-2">
-                <a href="#">Get Started</a>
-              </li>
-            </ul>
-          ) : null}
+    <div className="w-full pt-6 flex justify-between items-center text-white">
+        <div>
+          <h1 className="text-[32px] font-extrabold">Valubah</h1>
         </div>
+        <div>
+          <ul className="flex gap-10">
+            <li>About</li>
+            <li>FAQs</li>
+            <li>Contact Us</li>
+            <li className="bg-[#FBCBC9] p-4 mt-[-15px] font-bold text-black rounded-lg">Get Started</li>
+          </ul>
+        </div>
+    </div>
+    
+    {/* Write up and image */}
+    <div className="py-2 flex text-white">
+      <div className="basis-1/2">
+        <p className="text-[50px] mt-24 leading-[4rem]
+        font-black"><span className="text-[#FBCBC9]"> 
+          Valubah: {" "}
+        </span>Your 
+        Secure Path to a 
+      Confident Future</p>
+        <p className="mt-10 text-xl">Explore our Comprehensive Financial Support and
+        Protection Solutions Tailored for Gig Workers,
+            Informal Income Earners, and Businesses.</p>
+          <p className="bg-[#FBCBC9] pl-12 py-4 w-[12rem] mt-10 font-bold text-black rounded-lg">Get Started</p>
       </div>
+      <div className="basis-1/2">
+        <img src={People} className="pl-10 ml-10"/>
+      </div>
+    </div>
+
+    </div>
     </div>
   )
 }
 
-export default NavBar
+export default Navbar

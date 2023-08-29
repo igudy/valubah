@@ -8,7 +8,7 @@ import Background3 from '../assets/background3.png'
 const HomeSection = () => {
   return     <>
   {/* First Section */}
-  <div className='px-[30rem]'>
+  <div className='px-[30rem] font-montserrat'>
     <div className='flex items-center text-center justify-center'>
       <div className='mt-20'>
         <p className='text-4xl font-bold'>

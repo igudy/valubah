@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
+import HomeSection from '../components/HomeSection'
+import Footer from '../components/Footer'
 
 const Homepage = () => {
   return (
-    <div>Homepage</div>
+  <>  
+    <Navbar />
+    <HomeSection />
+    <Footer />
+  </>
   )
 }
 

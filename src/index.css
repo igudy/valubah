@@ -10,14 +10,22 @@ body {
   position: relative;
 }
 
+/* Hero image */
 .image-div {
   background-image: url("../src/assets/greenstripe-01.png");
   background-size: cover;
-  /* width: 300px;
-  height: 200px; */
 }
 
+/* 5th section image */
 .pink-div {
   background-image: url("../src/assets/pink-01.png");
   background-size: cover;
+}
+
+/* Footer-icon */
+.footer-icon{
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  margin-top: 4px;
 }

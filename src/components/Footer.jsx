@@ -1,4 +1,8 @@
 import React from "react";
+import Instagram from "../assets/ig.png";
+import Facebook from "../assets/facebook.png";
+import Linkedin from "../assets/linkedin.png";
+import Twitter from "../assets/twitter.png";
 
 const Footer = () => {
   return (
@@ -49,18 +53,17 @@ const Footer = () => {
 
         {/* Social media section */}
         <div className="mx-20 flex gap-4 mt-3">
-          <div className="w-[60%] h-[0.5px] bg-white"></div>
+          <div className="w-[35%] h-[0.5px] bg-white"></div>
           <div className="mb-6 mt-[-2rem]">
-            {" "}
-            Copyright Valubah 2023
-            <span className="flex">
-              <img />
-              <img />
-              <img />
-              <img />
-            </span>
+            <div className="pt-5 gap-2 flex">
+              Copyright Valubah 2023
+              <img src={Facebook} className="footer-icon" />
+              <img src={Twitter} className="footer-icon" />
+              <img src={Instagram} className="footer-icon" />
+              <img src={Linkedin} className="footer-icon" />
+            </div>
           </div>
-          <div className="w-[60%] h-[0.5px] bg-white"></div>
+          <div className="w-[35%] h-[0.5px] bg-white"></div>
         </div>
       </div>
     </div>
